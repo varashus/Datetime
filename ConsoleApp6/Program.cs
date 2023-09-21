@@ -28,14 +28,38 @@ namespace ConsoleApp6
 
 
             //dátum-idő tárolására való
-            DateTime dm = new DateTime(1930, 10, 22);
+            DateTime dm = new DateTime(2023,09,01);
+            DateTime dm2 = new DateTime(1995,10,11);
+            TimeSpan ts5 = dm - dm2;
+            Console.WriteLine(ts5);
+            Console.WriteLine();
+            Console.WriteLine(dm2);
+            var dm3 = dm2.AddDays(100);
+            Console.WriteLine(dm>dm2);
+            Console.WriteLine(dm3);
 
-            Console.WriteLine(dm);
-            Console.WriteLine(dm.ToString("yyyy"));
+            var dim =  DateTime.DaysInMonth(2016,02);
+            var dim2 =  DateTime.IsLeapYear(2024); /*szökőév*/
+            var dim3 =  DateTime.MinValue; /*minérték ami megadható*/
+            var dim4 =  DateTime.Parse("2000-03-16"); 
+ 
+
+            Console.WriteLine(dim);
+            Console.WriteLine(dim2);
+            Console.WriteLine(dim3);
+            Console.WriteLine(dim4);
+            Console.ReadLine();
+            Console.WriteLine("--------------------------------------");
+            for (DateTime d = new DateTime(2023,09,07); d <= DateTime.Parse("2024-06-15") ; d= d.AddDays(7))
+            {
+                Console.WriteLine(d);
+            }
+            
 
 
 
 
+            Console.ReadLine();
 
 
         }
